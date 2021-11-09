@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    width: 100%;
+    font-family: "Roboto";
+  }
+  
+  /* chatbot main container */
+  .chatbot-container {
+    border: 1px solid;
+    width: 390px;
+    height: 560px;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    background: white;
+    z-index: 100;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    transition: all 0.8s ease-in-out;
+    transform: translateY(0);
+  }
+  
+  /* to hide the chatbot main container */
+  .hide {
+      transform: translateY(200%);
+    }
+  
+    /* chatbot top portion */
+  .chatbot-header {
+    height: 240px;
+    width: 390px;
+    background: #fb6d0ee0;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    top: 0;
+    opacity: 0;
+    transition: opacity 1s linear 1s;
+  }
+  
+  /* close btn in chatbot when opened/shown to users */
+  .chatbot-close {
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    right: 18px;
+    top: 6px;
+    cursor: pointer;
+  }
+  
+  .chatbot-header > p {
+    margin-left: 45px;
+    color: white;
+  }
+  
+  .chatbot-header .title {
+    margin-top: 15px !important;
+    font-size: 27px !important;
+    font-weight: 500;
+  }
+  
+  .chatbot-header p:nth-child(2) {
+    margin-top: 2px;
+    margin-bottom: 8px;
+    font-size: 20px;
+  }
+  
+  .chatbot-header-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fb6d0e;
+    box-shadow: 0px 0px 0px 1px #00000026;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1000 !important;
+    color: #fff;
+    margin-left: 30px;
+    margin-top: 15px;
+    font-size: 30px;
+  }
+
+  /* ******top portion ends here******* */
+  
+  /* chatbot body container */
+  .chatbot-body {
+    height: 375px;
+    width: 350px;
+    box-shadow: 0px 0px 0px 1px #00000024;
+    top: 30%;
+    border-radius: 10px;
+    opacity: 0;
+    position: absolute;
+    background-color: white;
+  }
+  
+  .faq {
+    margin-top: 52px;
+    margin-left: 25px;
+    opacity: 0;
+  }
+  
+  /* for questions in chatbot body */
+  .question-card {
+    margin-top: 22px;
+    margin-left: 25px;
+    box-shadow: 2px 3px 4px 2px #0000001a;
+    width: 85%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+  }
+  
+
+  .question-card .outer {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fb7f2b63;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+  }
+  
+  .question-card .outer .inner {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fb6d0e;
+  }
+  
+  .question-card > p {
+    padding: 10px 5px;
+    font-size: 13px;
+    font-weight: 400;
+  }
+  
+  .btn-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .btn-group button {
+    padding: 10px 20px;
+    margin-top: 25px;
+    border: none;
+    background: none;
+    border-radius: 10px;
+    box-shadow: 1px 2px 1px 2px #d3d3d396;
+    font-size: 15px;
+    cursor: pointer;
+    opacity: 0;
+  }
+  
+  .btn-group > button > i {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  /* main chatbot button */
+  .chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 100px;
+    width: 100px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #fb6d0e;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+  }
+  
+  /* to show the content when loading the chatbot */
+  .show{
+      opacity: 1 !important;
+  }
+   
+  
+  /* for 576px - mobile device */
+  @media (max-width : 576px) {
+    .chatbot-container, .chatbot-header{
+      width: 360px;
+    }
+  
+    .chatbot-body{
+      width: 330px;
+    }
+  
+    .faq{
+      margin-top: 30px;
+    }
+  
+  }
